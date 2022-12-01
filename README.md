@@ -1,2 +1,2 @@
-# slice of spice
+# Slice of Spice - Em andamento
  
