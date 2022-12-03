@@ -1,11 +1,16 @@
-import { GlobalStyles } from './GlobalStyles';
+import { ThemeProvider } from 'styled-components';
+import Header from './components/Header/Header';
+import { DivTest, GlobalStyles, theme } from './GlobalStyles';
 
 function App() {
   return (
-    <>
-      <GlobalStyles />
-      <h1>Hello, World!</h1>
-    </>
+    <ThemeProvider theme={theme}>
+      <>
+        <GlobalStyles />
+        <Header />
+        <DivTest />
+      </>
+    </ThemeProvider>
   );
 }
 
