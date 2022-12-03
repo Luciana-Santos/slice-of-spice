@@ -1,6 +1,7 @@
 import { ThemeProvider } from 'styled-components';
+import AboutUs from './components/AboutUs/AboutUs';
 import Header from './components/Header/Header';
-import { DivTest, GlobalStyles, theme } from './GlobalStyles';
+import { GlobalStyles, theme } from './GlobalStyles';
 
 function App() {
   return (
@@ -8,7 +9,7 @@ function App() {
       <>
         <GlobalStyles />
         <Header />
-        <DivTest />
+        <AboutUs />
       </>
     </ThemeProvider>
   );

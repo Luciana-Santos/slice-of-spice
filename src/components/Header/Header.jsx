@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { CgMenuGridO, CgClose } from 'react-icons/cg';
 import { Container, Flex } from '../../GlobalStyles';
-import { ButtonStyledLink } from '../UI/Button.styled';
-import { Titles } from '../UI/Titles';
+import { ButtonStyled } from '../UI/Button.styled';
+import { TitlesStyled } from '../UI/Titles.styled';
 import { HeaderStyledBg, HeaderStyled, MenuIcon } from './Header.styled';
 import Menu from './Menu';
 
@@ -25,10 +25,12 @@ const Header = () => {
           </Flex>
 
           <Flex direction="column">
-            <Titles>Slice of Spice</Titles>
-            <ButtonStyledLink as="a" href="/">
+            <TitlesStyled color={({ theme }) => theme.colors.vltBrow}>
+              Slice of Spice
+            </TitlesStyled>
+            <ButtonStyled as="a" href="/">
               Reservations
-            </ButtonStyledLink>
+            </ButtonStyled>
           </Flex>
         </HeaderStyled>
       </Container>

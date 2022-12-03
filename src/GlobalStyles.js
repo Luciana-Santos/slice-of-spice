@@ -44,8 +44,8 @@ export const Flex = styled.div`
   align-self: ${({ alignSelf }) => (alignSelf ? 'end' : '')};
 `;
 
-export const DivTest = styled.div`
-  height: 300vh;
+export const Grid = styled.div`
+  display: grid-template;
 `;
 
 export const theme = {
