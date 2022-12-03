@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
   *, *::before, *::after {
@@ -10,7 +10,7 @@ export const GlobalStyles = createGlobalStyle`
   body {
     min-height: 100vh;
     line-height: 1.5;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: ${({ theme }) => theme.fonts.body};
   }
   
   img {
@@ -32,3 +32,47 @@ export const GlobalStyles = createGlobalStyle`
   }
 
 `;
+
+export const Container = styled.div`
+  width: min(100% - 2rem, 70rem);
+  margin-inline: auto;
+`;
+
+export const Flex = styled.div`
+  display: flex;
+  flex-direction: ${({ direction }) => (direction ? 'column' : 'row')};
+  align-self: ${({ alignSelf }) => (alignSelf ? 'end' : '')};
+`;
+
+export const DivTest = styled.div`
+  height: 300vh;
+`;
+
+export const theme = {
+  colors: {
+    white: '#fff',
+    lowOpacityWhite: 'hsla(0, 0%, 100%, 0.59)',
+    body: 'rgb(71, 71, 71)',
+    mdPink: '#B75459',
+    mdPurple: '#553A59',
+    mdBrow: '#856968',
+    ltOrange: '#E8B57C',
+    vltBrow: '#E8DDC9',
+  },
+  fonts: {
+    titles: 'Prata',
+    body: 'Arial, Helvetica, sans-serif',
+  },
+  breakpoints: {
+    minWidth: {
+      medium: '740',
+      large: '960',
+      xlarge: '1400',
+    },
+    maxWidth: {
+      small: '739.98',
+      medium: '959.98',
+      large: '1399.98',
+    },
+  },
+};
