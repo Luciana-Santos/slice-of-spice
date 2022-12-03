@@ -7,9 +7,10 @@ export const AboutUsStyled = styled(Grid)`
   gap: 40px;
   padding-block: 60px;
   align-items: center;
+  grid-template-columns: 1fr;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.minWidth.medium}px) {
-    grid-template-columns: ${({ columns }) => (columns ? columns : '')};
+    grid-template-columns: ${({ columns }) => (columns ? columns : '1fr')};
   }
 `;
 

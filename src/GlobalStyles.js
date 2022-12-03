@@ -18,7 +18,7 @@ export const GlobalStyles = createGlobalStyle`
     display: block;
   }
 
-  h1, h2, h3 {
+  h1, h2, h3, h4 {
     line-height: 1;
     font-weight: 400;
   }
@@ -42,10 +42,18 @@ export const Flex = styled.div`
   display: flex;
   flex-direction: ${({ direction }) => (direction ? 'column' : 'row')};
   align-self: ${({ alignSelf }) => (alignSelf ? 'end' : '')};
+  flex-wrap: wrap;
+  gap: ${({ gap }) => (gap ? gap : '')};
+
+  div {
+    flex: 1 1 300px;
+  }
 `;
 
 export const Grid = styled.div`
-  display: grid-template;
+  display: grid;
+  grid-template-columns: ${({ columns }) => (columns ? columns : '1fr')};
+  gap: ${({ gap }) => (gap ? gap : '')};
 `;
 
 export const theme = {

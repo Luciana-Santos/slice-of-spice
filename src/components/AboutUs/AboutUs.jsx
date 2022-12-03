@@ -1,5 +1,5 @@
 import { AboutUsStyled } from './AboutUs.styled';
-import { Container } from '../../GlobalStyles';
+import { Container, Grid } from '../../GlobalStyles';
 import { TitlesStyled } from '../UI/Titles.styled';
 import { ParagraphStyled } from '../UI/Paragraph.styled';
 
@@ -8,7 +8,9 @@ const AboutUs = () => {
     <Container>
       <AboutUsStyled columns="340px 1fr">
         <div>
-          <TitlesStyled size={'48'}>About Us</TitlesStyled>
+          <TitlesStyled as="h2" size="40px">
+            About Us
+          </TitlesStyled>
 
           <ParagraphStyled>
             Cheeseburger nisi consectetur non consectetur. Ea mollit cheddar
@@ -18,7 +20,7 @@ const AboutUs = () => {
           </ParagraphStyled>
         </div>
 
-        <div>
+        <Grid gap="20px">
           <ParagraphStyled>
             Cheeseburger nisi consectetur non consectetur. Ea mollit cheddar
             cheese chicken nuggets magna ut nulla. Sed laborum secret sauce
@@ -32,7 +34,7 @@ const AboutUs = () => {
               alt="About us image"
             />
           </div>
-        </div>
+        </Grid>
       </AboutUsStyled>
     </Container>
   );
