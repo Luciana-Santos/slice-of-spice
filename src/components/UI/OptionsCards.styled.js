@@ -10,4 +10,5 @@ export const OptionsCardsStyled = styled.div`
   padding-block: 30px;
   padding-inline: 30px;
   height: 255px;
+  border-radius: 4px;
 `;

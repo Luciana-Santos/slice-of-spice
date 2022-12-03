@@ -1,6 +1,7 @@
 import { ThemeProvider } from 'styled-components';
 import AboutUs from './components/AboutUs/AboutUs';
 import Header from './components/Header/Header';
+import Menu from './components/Menu/Menu';
 import Options from './components/Options/Options';
 import { GlobalStyles, theme } from './GlobalStyles';
 
@@ -12,6 +13,7 @@ function App() {
         <Header />
         <AboutUs />
         <Options />
+        <Menu />
       </>
     </ThemeProvider>
   );
