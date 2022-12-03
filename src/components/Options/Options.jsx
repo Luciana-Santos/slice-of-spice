@@ -10,7 +10,7 @@ const Options = () => {
       <TitlesStyled center="center" as="h2" size="40px">
         Options
       </TitlesStyled>
-      <Flex gap="20px">
+      <Flex gap="20px" wrap="wrap">
         {content.optionsSection.map((item) => {
           return <OptionsCard key={item.id} data={item} />;
         })}

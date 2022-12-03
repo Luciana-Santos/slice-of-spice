@@ -42,8 +42,10 @@ export const Flex = styled.div`
   display: flex;
   flex-direction: ${({ direction }) => (direction ? 'column' : 'row')};
   align-self: ${({ alignSelf }) => (alignSelf ? 'end' : '')};
-  flex-wrap: wrap;
+  flex-wrap: ${({ wrap }) => (wrap ? wrap : '')};
   gap: ${({ gap }) => (gap ? gap : '')};
+  justify-content: ${({ justifyContent }) =>
+    justifyContent ? justifyContent : ''};
 
   div {
     flex: 1 1 300px;
@@ -54,6 +56,10 @@ export const Grid = styled.div`
   display: grid;
   grid-template-columns: ${({ columns }) => (columns ? columns : '1fr')};
   gap: ${({ gap }) => (gap ? gap : '')};
+  justify-content: ${({ justifyContent }) =>
+    justifyContent ? justifyContent : ''};
+  align-items: ${({ justifyContent }) =>
+    justifyContent ? justifyContent : ''};
 `;
 
 export const theme = {
@@ -73,13 +79,13 @@ export const theme = {
   },
   breakpoints: {
     minWidth: {
-      small: '640',
+      xsmall: '640',
       medium: '740',
       large: '960',
       xlarge: '1400',
     },
     maxWidth: {
-      xsmall: '639.98',
+      xSmall: '639.98',
       small: '739.98',
       medium: '959.98',
       large: '1399.98',
