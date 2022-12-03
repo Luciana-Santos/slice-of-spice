@@ -5,8 +5,6 @@ import { content } from '../../content';
 import OptionsCard from '../UI/OptionsCard';
 
 const Options = () => {
-  console.log(content.optionsSection);
-
   return (
     <OptionsStyled>
       <TitlesStyled center="center" as="h2" size="40px">

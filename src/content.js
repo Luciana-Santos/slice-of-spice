@@ -60,4 +60,40 @@ export const content = {
       img: 'https://github.com/Luciana-Santos/slice-of-spice/blob/main/public/assets/img/options-img3.jpg?raw=true',
     },
   ],
+  menuSection: {
+    topOptions: [
+      {
+        id: Math.round(Math.random() * 99999),
+        title: 'Food One',
+        text: 'Moist consequat french fries ad do french fries cheeseburger excepteur. Id irure sauteed mushrooms esse tempor velit ut et ketchup.',
+      },
+      {
+        id: Math.round(Math.random() * 99999),
+        title: 'Food Two',
+        text: 'Moist consequat french fries ad do french fries cheeseburger excepteur. Id irure sauteed mushrooms esse tempor velit ut et ketchup.',
+      },
+      {
+        id: Math.round(Math.random() * 99999),
+        title: 'Food Three',
+        text: 'Moist consequat french fries ad do french fries cheeseburger excepteur. Id irure sauteed mushrooms esse tempor velit ut et ketchup.',
+      },
+    ],
+    bottomOptions: [
+      {
+        id: Math.round(Math.random() * 99999),
+        title: 'Food Four',
+        text: 'Moist consequat french fries ad do french fries cheeseburger excepteur. Id irure sauteed mushrooms esse tempor velit ut et ketchup.',
+      },
+      {
+        id: Math.round(Math.random() * 99999),
+        title: 'Food Five',
+        text: 'Moist consequat french fries ad do french fries cheeseburger excepteur. Id irure sauteed mushrooms esse tempor velit ut et ketchup.',
+      },
+      {
+        id: Math.round(Math.random() * 99999),
+        title: 'Food Six',
+        text: 'Moist consequat french fries ad do french fries cheeseburger excepteur. Id irure sauteed mushrooms esse tempor velit ut et ketchup.',
+      },
+    ],
+  },
 };

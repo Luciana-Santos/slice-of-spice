@@ -73,11 +73,13 @@ export const theme = {
   },
   breakpoints: {
     minWidth: {
+      small: '640',
       medium: '740',
       large: '960',
       xlarge: '1400',
     },
     maxWidth: {
+      xsmall: '639.98',
       small: '739.98',
       medium: '959.98',
       large: '1399.98',
