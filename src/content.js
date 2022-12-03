@@ -31,4 +31,33 @@ export const content = {
       url: '#reservations',
     },
   ],
+  optionsSection: [
+    {
+      id: Math.round(Math.random() * 99999),
+      title: 'Option One',
+      text: 'Moist consequat french fries ad do french fries cheeseburger excepteur. Id irure sauteed mushrooms esse tempor velit ut et ketchup.',
+    },
+    {
+      id: Math.round(Math.random() * 99999),
+      img: 'https://github.com/Luciana-Santos/slice-of-spice/blob/main/public/assets/img/options-img1.jpg?raw=true',
+    },
+    {
+      id: Math.round(Math.random() * 99999),
+      title: 'Option Two',
+      text: 'Moist consequat french fries ad do french fries cheeseburger excepteur. Id irure sauteed mushrooms esse tempor velit ut et ketchup.',
+    },
+    {
+      id: Math.round(Math.random() * 99999),
+      img: 'https://github.com/Luciana-Santos/slice-of-spice/blob/main/public/assets/img/options-img2.jpg?raw=true',
+    },
+    {
+      id: Math.round(Math.random() * 99999),
+      title: 'Option Three',
+      text: 'Moist consequat french fries ad do french fries cheeseburger excepteur. Id irure sauteed mushrooms esse tempor velit ut et ketchup.',
+    },
+    {
+      id: Math.round(Math.random() * 99999),
+      img: 'https://github.com/Luciana-Santos/slice-of-spice/blob/main/public/assets/img/options-img3.jpg?raw=true',
+    },
+  ],
 };
