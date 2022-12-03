@@ -42,6 +42,7 @@ export const HeaderStyledBg = styled.div`
 export const MenuIcon = styled.div`
   color: ${({ theme }) => theme.colors.vltBrow};
   font-size: 30px;
+  cursor: pointer;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.minWidth.medium}px) {
     display: none;
