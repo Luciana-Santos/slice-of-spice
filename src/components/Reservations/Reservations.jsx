@@ -8,7 +8,7 @@ import { ReservationsStyled } from './Reservations.styled';
 
 const Reservations = () => {
   return (
-    <ReservationsStyled>
+    <ReservationsStyled id="reservations">
       <div>
         <TitlesStyled size="40px">Reservations</TitlesStyled>
 

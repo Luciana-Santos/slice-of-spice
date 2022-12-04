@@ -6,7 +6,7 @@ import OptionsCard from '../UI/OptionsCard';
 
 const Options = () => {
   return (
-    <OptionsStyled>
+    <OptionsStyled id="options">
       <TitlesStyled center="center" as="h2" size="40px">
         Options
       </TitlesStyled>

@@ -25,9 +25,7 @@ const Header = () => {
           </Flex>
 
           <Flex direction="column">
-            <TitlesStyled color={({ theme }) => theme.colors.vltBrow}>
-              Slice of Spice
-            </TitlesStyled>
+            <TitlesStyled color="#E8DDC9">Slice of Spice</TitlesStyled>
             <ButtonStyled as="a" href="/">
               Reservations
             </ButtonStyled>

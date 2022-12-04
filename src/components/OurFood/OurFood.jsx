@@ -6,7 +6,7 @@ import { OurFoodInfo, OurFoodStyled } from './OurFood.styled';
 
 const OurFood = () => {
   return (
-    <Container>
+    <Container id="ourFood">
       <OurFoodStyled gap="40px" column="repeat(2,1fr)">
         <Flex gap="15px" justifyContent="center">
           <img

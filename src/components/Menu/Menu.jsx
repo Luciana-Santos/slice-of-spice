@@ -2,13 +2,10 @@ import { TitlesStyled } from '../UI/Titles.styled';
 import { MenuGrid, MenuImage, MenuStyled } from './Menu.styled';
 import { content } from '../../content';
 import MenuCards from '../UI/MenuCards';
-import { Flex, Grid } from '../../GlobalStyles';
 
 const Menu = () => {
-  console.log(content.menuSection);
-
   return (
-    <MenuStyled>
+    <MenuStyled id="menu">
       <TitlesStyled size="40px" center="center">
         Menu
       </TitlesStyled>

@@ -5,7 +5,7 @@ import { ParagraphStyled } from '../UI/Paragraph.styled';
 
 const AboutUs = () => {
   return (
-    <Container>
+    <Container id="about">
       <AboutUsStyled columns="340px 1fr">
         <div>
           <TitlesStyled as="h2" size="40px">

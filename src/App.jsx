@@ -1,5 +1,6 @@
 import { ThemeProvider } from 'styled-components';
 import AboutUs from './components/AboutUs/AboutUs';
+import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import Menu from './components/Menu/Menu';
 import Options from './components/Options/Options';
@@ -18,6 +19,7 @@ function App() {
         <Menu />
         <OurFood />
         <Reservations />
+        <Footer />
       </>
     </ThemeProvider>
   );
