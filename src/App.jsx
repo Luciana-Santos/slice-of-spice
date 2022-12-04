@@ -4,6 +4,7 @@ import Header from './components/Header/Header';
 import Menu from './components/Menu/Menu';
 import Options from './components/Options/Options';
 import OurFood from './components/OurFood/OurFood';
+import Reservations from './components/Reservations/Reservations';
 import { GlobalStyles, theme } from './GlobalStyles';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Options />
         <Menu />
         <OurFood />
+        <Reservations />
       </>
     </ThemeProvider>
   );

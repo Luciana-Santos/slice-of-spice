@@ -31,6 +31,7 @@ export const GlobalStyles = createGlobalStyle`
     list-style: none;
   }
 
+
 `;
 
 export const Container = styled.div`
