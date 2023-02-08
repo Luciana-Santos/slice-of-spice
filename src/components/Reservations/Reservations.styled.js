@@ -49,7 +49,6 @@ export const ReservationConfirmed = styled.div`
 `;
 
 export const ReservationConfirmedTitle = styled.h4`
-  margin-top: 20px;
   font-family: ${({ theme }) => theme.fonts.titles};
   font-size: 20px;
   color: ${({ theme }) => theme.colors.mdPink};
@@ -57,7 +56,7 @@ export const ReservationConfirmedTitle = styled.h4`
 
 export const ReservationInfo = styled.ul`
   display: grid;
-  gap: 10px;
+  gap: 6px;
 
   li {
     font-size: 18px;
