@@ -7,6 +7,10 @@ export const GlobalStyles = createGlobalStyle`
   box-sizing: border-box;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     min-height: 100vh;
     line-height: 1.5;
@@ -16,6 +20,7 @@ export const GlobalStyles = createGlobalStyle`
   img {
     width: 100%;
     display: block;
+    border-radius: 4px;
   }
 
   h1, h2, h3, h4 {

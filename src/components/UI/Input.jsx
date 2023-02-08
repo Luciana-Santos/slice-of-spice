@@ -1,13 +1,16 @@
-import { InputStyled } from './Input.styled';
+import { forwardRef } from 'react';
+import { InputStyled, InputWrapper } from './Input.styled';
 
-const Input = ({ label, id, type, placeholder }) => {
+const Input = forwardRef((props, ref) => {
+  const { label, type, placeholder, error, ...rest } = props;
   return (
-    <>
+    <InputWrapper>
       <InputStyled>
         {label}
-        <input id={id} type={type} placeholder={placeholder} />
+        <input type={type} placeholder={placeholder} ref={ref} {...rest} />
       </InputStyled>
-    </>
+      <p>{error}</p>
+    </InputWrapper>
   );
-};
+});
 export default Input;

@@ -40,9 +40,12 @@ export const HeaderStyledBg = styled.div`
 `;
 
 export const MenuIcon = styled.div`
-  color: ${({ theme }) => theme.colors.vltBrow};
+  color: ${({ theme }) => theme.colors.mdPink};
   font-size: 30px;
   cursor: pointer;
+  position: fixed;
+  right: 10px;
+  top: 10px;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.minWidth.medium}px) {
     display: none;

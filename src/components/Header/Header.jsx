@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import { CgMenuGridO, CgClose } from 'react-icons/cg';
+import { CgClose, CgMenuGridO } from 'react-icons/cg';
 import { Container, Flex } from '../../GlobalStyles';
 import { ButtonStyled } from '../UI/Button.styled';
 import { TitlesStyled } from '../UI/Titles.styled';
-import { HeaderStyledBg, HeaderStyled, MenuIcon } from './Header.styled';
+import { HeaderStyled, HeaderStyledBg, MenuIcon } from './Header.styled';
 import Menu from './Menu';
 
 const Header = () => {
@@ -26,7 +26,7 @@ const Header = () => {
 
           <Flex direction="column">
             <TitlesStyled color="#E8DDC9">Slice of Spice</TitlesStyled>
-            <ButtonStyled as="a" href="/">
+            <ButtonStyled as="a" href="#reservations">
               Reservations
             </ButtonStyled>
           </Flex>

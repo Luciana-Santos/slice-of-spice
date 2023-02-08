@@ -10,6 +10,7 @@ export const OurFoodStyled = styled(Grid)`
   img {
     height: 630px;
     max-width: 238px;
+    border-radius: 4px;
 
     &:first-child {
       object-position: 0px 0px;

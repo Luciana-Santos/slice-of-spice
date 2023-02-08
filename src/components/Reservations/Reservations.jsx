@@ -1,12 +1,68 @@
-import { Container, Grid } from '../../GlobalStyles';
+import { yupResolver } from '@hookform/resolvers/yup';
+import { useState } from 'react';
+import { useForm } from 'react-hook-form';
+import * as yup from 'yup';
+import { Grid } from '../../GlobalStyles';
 import { ButtonStyled } from '../UI/Button.styled';
 import Input from '../UI/Input';
-import { FieldsetStyled } from '../UI/Input.styled';
+import { FormStyled } from '../UI/Input.styled';
 import { ParagraphStyled } from '../UI/Paragraph.styled';
 import { TitlesStyled } from '../UI/Titles.styled';
-import { ReservationsStyled } from './Reservations.styled';
+import {
+  FieldsetStyled,
+  ReservationConfirmed,
+  ReservationConfirmedTitle,
+  ReservationInfo,
+  ReservationsStyled,
+} from './Reservations.styled';
+
+const schema = yup.object().shape({
+  fullName: yup.string().required("Can't be empty."),
+  phone: yup
+    .string()
+    .matches(/^(\(\d{2}\))?\s?\d{4,5}-\d{4}$/, 'Invalid format.')
+    .required("Can't be empty."),
+  numPeople: yup
+    .number()
+    .min(1, 'You must select at least 1.')
+    .max(8, "You can't select more than 8.")
+    .required("Can't be empty."),
+  date: yup
+    .date()
+    .required("Can't be empty.")
+    .nullable()
+    .typeError('Invalid date format'),
+  hour: yup
+    .string()
+    .matches(/^([1][4-9]|2[0-2]):[0-5][0-9]$/, 'Invalid time format')
+    .required("Can't be empty."),
+});
 
 const Reservations = () => {
+  const [formData, setformData] = useState({});
+  const [formSent, setformSent] = useState(false);
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    resolver: yupResolver(schema),
+    defaultValues: {
+      fullName: '',
+      phone: '',
+      numPeople: 1,
+      date: new Date().toISOString().substr(0, 10),
+      hour: '',
+    },
+  });
+
+  const handleOnSubmit = (data, e) => {
+    e.preventDefault();
+    setformSent(true);
+    setformData(data);
+  };
+
   return (
     <ReservationsStyled id="reservations">
       <div>
@@ -25,42 +81,79 @@ const Reservations = () => {
           sesame seed bun non fugiat.
         </ParagraphStyled>
 
-        <form>
-          <Grid gap="20px" justifyContent="center" alignItems="center">
-            <Input
-              label="Full name:"
-              id="name"
-              type="text"
-              placeholder="John Doe"
-            />
-            <FieldsetStyled>
+        {formSent ? (
+          <ReservationConfirmed>
+            <ReservationConfirmedTitle>
+              Reservation confirmed
+            </ReservationConfirmedTitle>
+            <ReservationInfo>
+              <li>
+                <span>Name:</span> {formData.fullName}
+              </li>
+              <li>
+                <span>Phone:</span> {formData.phone}
+              </li>
+              <li>
+                <span>Number of seats:</span> {formData.numPeople}
+              </li>
+              <li>
+                <span>Date:</span> {formData.date.toLocaleDateString()}
+              </li>
+              <li>
+                <span>Hour:</span> {formData.hour}
+              </li>
+            </ReservationInfo>
+          </ReservationConfirmed>
+        ) : (
+          <FormStyled onSubmit={handleSubmit(handleOnSubmit)}>
+            <Grid gap="20px" justifyContent="center" alignItems="center">
               <Input
-                label="Phone:"
-                id="phone"
-                type="tel"
-                placeholder="000-000-000"
+                label="Full name:"
+                type="text"
+                placeholder="John Doe"
+                {...register('fullName')}
+                error={errors.fullName?.message}
               />
-              <Input label="Number of people:" type="number" placeholder="3" />
-            </FieldsetStyled>
-            <FieldsetStyled>
-              <Input
-                label="Date:"
-                type="date"
-                value="03/12/2022"
-                min="03/12/2022"
-                max="03/02/2023"
-              />
-              <Input
-                label="Hour:"
-                type="time"
-                id="hour"
-                min="14:00"
-                max="22:00"
-              />
-            </FieldsetStyled>
-            <ButtonStyled>Confirm</ButtonStyled>
-          </Grid>
-        </form>
+              <FieldsetStyled>
+                <Input
+                  label="Phone:"
+                  type="tel"
+                  placeholder="(xx) 00000-0000"
+                  {...register('phone')}
+                  error={errors.phone?.message}
+                />
+
+                <Input
+                  label="Number of people:"
+                  type="number"
+                  placeholder="1"
+                  min={1}
+                  max={8}
+                  {...register('numPeople')}
+                  error={errors.numPeople?.message}
+                />
+              </FieldsetStyled>
+              <FieldsetStyled>
+                <Input
+                  label="Date:"
+                  type="date"
+                  {...register('date')}
+                  error={errors.date?.message}
+                />
+
+                <Input
+                  label="Hour:"
+                  type="time"
+                  {...register('hour')}
+                  min="14:00"
+                  max="22:00"
+                  error={errors.hour?.message}
+                />
+              </FieldsetStyled>
+              <ButtonStyled>Confirm</ButtonStyled>
+            </Grid>
+          </FormStyled>
+        )}
       </div>
 
       <div>

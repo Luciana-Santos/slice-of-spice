@@ -13,6 +13,8 @@ export const MenuStyled = styled.nav`
     width: 100%;
     column-gap: 30px;
     background-color: ${({ theme }) => theme.colors.mdPurple};
+    border-radius: 4px;
+    z-index: 9999;
 
     a {
       padding-block: 12px;
